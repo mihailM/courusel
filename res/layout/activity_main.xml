@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.example.courusel.CustomScrollView
+        android:id="@+id/horizontal_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/parents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="100dip"
+                android:layout_height="100dip" >
+
+                <ImageView
+                    android:id="@+id/btn_add_photo"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:scaleType="centerInside" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dip"
+                android:layout_height="100dip" >
+
+                <ImageView
+                    android:id="@+id/btn_add_photo"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:scaleType="centerInside" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dip"
+                android:layout_height="100dip" >
+
+                <ImageView
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:scaleType="centerInside" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dip"
+                android:layout_height="100dip" >
+
+                <ImageView
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:scaleType="centerInside" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dip"
+                android:layout_height="100dip" >
+
+                <ImageView
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:scaleType="centerInside" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dip"
+                android:layout_height="100dip" >
+
+                <ImageView
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:scaleType="centerInside" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.example.courusel.CustomScrollView>
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="2px"
+        android:layout_height="50px"
+        android:layout_below="@+id/horizontal_scroll_view"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/black" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_below="@+id/center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:onClick="scrollTO"
+        android:text="scrollMe" />
+
+    <EditText
+        android:id="@+id/index"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageV"
+        android:visibility="gone"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_below="@+id/index"
+        android:scaleType="centerInside"
+        android:src="@drawable/image1" />
+
+</RelativeLayout>
